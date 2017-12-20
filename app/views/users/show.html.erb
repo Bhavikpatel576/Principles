@@ -1,4 +1,5 @@
 <%= avatar(@user) %>
 <h1> Dashboard for <%= @user.username %></h1>
 <%= follow_button(@user) %>
+<%= link_to "followers", user_followers_path(@user) %>
 <%= render @shouts %>
