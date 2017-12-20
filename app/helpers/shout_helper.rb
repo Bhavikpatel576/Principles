@@ -1,5 +1,13 @@
 
 module ShoutHelper
+  def shout_form_for(type)
+    form_for Shout.new do |form|
+      form.hidden_field(:content_type, value: type) + 
+      form.fields_for(:content) { |content_form| yield(content_form) } + 
+      form.submit("Shout!") 
+    end
+  end
+
   def like_button(shout)
     if current_user.liked?(shout)
       link_to "Unlike", unlike_shout_path(shout), method: :delete
