@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   end
 
   root to: "homes#show" 
+  
+  resource :search, only: [:show]
+
   resources :hashtags, only: [:show]
+  
   resources :shouts, only: [:create, :show] do 
     member do
       post "like" => "likes#create"
