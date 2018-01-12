@@ -1,25 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Purpose
+Create an application where people can share their principles with each other
 
-Things you may want to cover:
+# Tech components
+* Ruby version - 2.3.3
+* Rails version - 5.1.4
+* Postgresql
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
 
 * Database initialization
 
 * How to run the test suite
+- run rake! Using Rspec and capybara for my test suits
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
-# shoutr
+Database Schema
+![alt text](https://github.com/Bhavikpatel576/shoutr/blob/master/erd.pdf)
