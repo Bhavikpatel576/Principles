@@ -1,11 +1,17 @@
-<h1>Principles: Write down one of your principles to be place on your dashboard</h1>
+<!doctype= html>
+<html lang="eng-US">
+  <head>
+    <h1>Principles: Write down one of your principles to be place on your dashboard</h1>
+  </head>
+  <body>
+    <%= shout_form_for(TextShout) do |form| %>
+      <%= form.text_field :body, placeholder: "Add Principle Here!", required: true %>
+    <% end %>
 
-<%= shout_form_for(TextShout) do |form| %>
-    <%= form.text_field :body, placeholder: "Add Principle Here!", required: true %>
-<% end %>
+    <%= shout_form_for(PhotoShout) do |form| %>
+      <%= form.file_field :image, required: true %>
+    <% end %>
 
-<%= shout_form_for(PhotoShout) do |form| %>
-    <%= form.file_field :image, required: true %>
-<% end %>
-
-<%= render @shouts%>
+    <%= render @shouts%>
+  </body>
+</html>
