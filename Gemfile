@@ -5,6 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#Secret Keys
+gem 'figaro'
+#Facebook Auth
+gem 'omniauth'
+gem 'omniauth-facebook'
 #User Authentication
 gem 'clearance'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

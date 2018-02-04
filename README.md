@@ -17,4 +17,4 @@ Create an application where people can share their principles with each other
 * Services (job queues, cache servers, search engines, etc.)
 
 Database Schema
-![alt text](https://github.com/Bhavikpatel576/shoutr/blob/master/erd.pdf)
+![alt text](https://github.com/Bhavikpatel576/shoutr/blob/master/app/assets/images/database.png)
