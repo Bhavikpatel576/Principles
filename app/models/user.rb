@@ -17,6 +17,21 @@ class User < ApplicationRecord
     dependent: :destroy
   has_many :followers, through: :follower_relationships
   
+  #facebook auth
+  def from_omniauth(auth_hash)
+    user = find_or_create_by(uid: auth_hash['uid'], provider: auth_hash['provider'])
+    user.name = auth_hash['info']['name']
+    user.provider = auth_hash['provider']
+  end
+  #over-ride authentication
+  def email_optional?
+    true
+  end
+
+  def password_optional?
+    true
+  end
+  
   def timeline_shouts
     Shout.where(user_id: followed_user_ids + [id])
   end

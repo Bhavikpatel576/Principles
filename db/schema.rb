@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171218191729) do
+ActiveRecord::Schema.define(version: 20180204021048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +70,8 @@ ActiveRecord::Schema.define(version: 20171218191729) do
     t.string "username"
     t.integer "followed_users_count", default: 0, null: false
     t.integer "followers_count", default: 0, null: false
+    t.string "provider"
+    t.string "uid"
     t.index ["email"], name: "index_users_on_email"
     t.index ["remember_token"], name: "index_users_on_remember_token"
     t.index ["username"], name: "index_users_on_username", unique: true
